@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">CambrianLive_w20</string>
+    <string name="BillAmountText">Bill Amount</string>
+    <string name="TipPercentTitle">Tip Percent</string>
+    <string name="TipAmountTitleTextView">Tip Amount</string>
+    <string name="TotalTitle">Total</string>
+    <string name="TipPercent">15%</string>
+    <string name="TipAmount">$0.00</string>
+    <string name="total">$0.00</string>
+    <string name="decreaseButton">-</string>
+    <string name="increaseButton">+</string>
+</resources>
