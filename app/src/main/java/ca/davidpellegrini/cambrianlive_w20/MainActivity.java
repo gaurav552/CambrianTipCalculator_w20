@@ -35,6 +35,7 @@ implements OnEditorActionListener, OnClickListener {
 
         tipAmountTextView = (TextView) findViewById(R.id.TipAmountTextView);
         totalAmountTextView = (TextView) findViewById(R.id.totalTextView);
+        tipPercentTextView = findViewById(R.id.TipPercentTextView);
         billAmountEditText = (EditText) findViewById(R.id.BillAmountEditText);
         billAmountEditText.setOnEditorActionListener(this);
 
