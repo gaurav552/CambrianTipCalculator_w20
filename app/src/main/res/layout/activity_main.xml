@@ -1,96 +1,158 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/BillAmountTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/BillAmountText"
-        android:textSize="24sp"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="16dp" />
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="10dp">
 
-    <EditText
-        android:id="@+id/BillAmountEditText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="number"
-        tools:layout_editor_absoluteX="172dp"
-        tools:layout_editor_absoluteY="16dp" />
+            <TableRow
+                android:paddingBottom="10dp">
 
-    <TextView
-        android:id="@+id/TipPercentTitleTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/TipPercentTitle"
-        tools:layout_editor_absoluteX="19dp"
-        tools:layout_editor_absoluteY="117dp"
-        tools:textSize="24sp" />
+                <TextView
+                    android:id="@+id/BillAmountTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="50dp"
+                    android:text="@string/BillAmountText"
+                    android:textSize="24sp" />
 
-    <TextView
-        android:id="@+id/TipPercentTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/TipPercent"
-        tools:layout_editor_absoluteX="172dp"
-        tools:layout_editor_absoluteY="117dp"
-        tools:textSize="24sp" />
+                <EditText
+                    android:id="@+id/BillAmountEditText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_span="3"
+                    android:ems="10"
+                    android:inputType="number" />
+            </TableRow>
 
-    <TextView
-        android:id="@+id/TipAmountTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/TipAmount"
-        tools:layout_editor_absoluteX="172dp"
-        tools:layout_editor_absoluteY="220dp"
-        tools:textSize="24sp" />
+            <TableRow>
+                <TextView
+                    android:id="@+id/TipPercentTitleTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/TipPercentTitle"
+                    tools:textSize="24sp" />
 
-    <TextView
-        android:id="@+id/totalTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/total"
-        tools:layout_editor_absoluteX="172dp"
-        tools:layout_editor_absoluteY="320dp"
-        tools:textSize="24sp" />
+                <TextView
+                    android:id="@+id/TipPercentTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="50dp"
+                    android:text="@string/TipPercent"
+                    tools:textSize="24sp" />
 
-    <TextView
-        android:id="@+id/TipAmountTitleTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/TipAmountTitleTextView"
-        tools:layout_editor_absoluteX="19dp"
-        tools:layout_editor_absoluteY="220dp"
-        tools:textSize="24sp" />
+                <Button
+                    android:id="@+id/decreaseButton"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginRight="20dp"
+                    android:text="@string/decreaseButton" />
 
-    <TextView
-        android:id="@+id/TotalTitleTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/TotalTitle"
-        tools:layout_editor_absoluteX="19dp"
-        tools:layout_editor_absoluteY="320dp"
-        tools:textSize="24sp" />
+                <Button
+                    android:id="@+id/increaseButton"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:text="@string/increaseButton" />
+            </TableRow>
 
-    <Button
-        android:id="@+id/decreaseButton"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:text="@string/decreaseButton"
-        tools:layout_editor_absoluteX="239dp"
-        tools:layout_editor_absoluteY="99dp" />
+            <TableRow
+                android:paddingBottom="10dp">
+                <TextView
+                    android:id="@+id/TipAmountTitleTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/TipAmountTitleTextView"
+                    tools:layout_editor_absoluteX="19dp"
+                    tools:layout_editor_absoluteY="220dp"
+                    tools:textSize="24sp" />
 
-    <Button
-        android:id="@+id/increaseButton"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:text="@string/increaseButton"
-        tools:layout_editor_absoluteX="325dp"
-        tools:layout_editor_absoluteY="99dp" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+                <TextView
+                    android:id="@+id/TipAmountTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/TipAmount"
+                    tools:layout_editor_absoluteX="172dp"
+                    tools:layout_editor_absoluteY="220dp"
+                    tools:textSize="24sp" />
+            </TableRow>
+
+            <TableRow
+                android:paddingBottom="10dp">
+                 <TextView
+                android:id="@+id/TotalTitleTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/TotalTitle"
+                tools:layout_editor_absoluteX="19dp"
+                tools:layout_editor_absoluteY="320dp"
+                tools:textSize="24sp" />
+
+                <TextView
+                    android:id="@+id/totalTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/total"
+                    tools:layout_editor_absoluteX="172dp"
+                    tools:layout_editor_absoluteY="320dp"
+                    tools:textSize="24sp" />
+            </TableRow>
+
+            <TableRow
+                android:paddingBottom="10dp">
+                <TextView
+                    android:id="@+id/splitLabel"
+                    android:text="Split Bill"/>
+                <RadioGroup
+                    android:id="@+id/splitRadioGroup"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:checkedButton="@id/radioButton_1"
+                    android:layout_span="2">
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="1 Person"
+                        android:id="@+id/radioButton_1" />
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="2 People"
+                        android:id="@+id/radioButton_2" />
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="3 People"
+                        android:id="@+id/radioButton_3" />
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="4 People"
+                        android:id="@+id/radioButton_4" />
+                </RadioGroup>
+            </TableRow>
+
+            <TableRow
+                android:paddingBottom="10dp">
+                <CheckBox
+                    android:id="@+id/rememberTipCheckBox"
+                    android:checked="true"
+                    android:layout_width="0dp"
+                    android:layout_weight="2"
+                    android:text="Remember tip percent?" />
+
+            </TableRow>
+        </TableLayout>
+    </HorizontalScrollView>
+</ScrollView>
