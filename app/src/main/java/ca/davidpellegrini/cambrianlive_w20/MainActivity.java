@@ -32,6 +32,7 @@ public class MainActivity extends AppCompatActivity {
         tipPercentTextView = findViewById(R.id.TipPercentTextView);
         billAmountEditText = findViewById(R.id.BillAmountEditText);
 
+        
         percentDownButton = findViewById(R.id.decreaseButton);
         percentUpButton = findViewById(R.id.increaseButton);
 
